@@ -50,8 +50,10 @@ class data_family:
         return data
         
     def write_entry(self, id, data):
-        if data != "":
-            return id + " " + data + "\n"
+        if data != str.strip(data):
+            print(repr(data), repr(str.strip(data)))
+        if str.strip(data) != "":
+            return id + " " + str.strip(data) + "\n"
         else:
             return id + " None\n"
 

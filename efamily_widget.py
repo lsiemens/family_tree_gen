@@ -102,8 +102,8 @@ def start_efamily_widget(dir="./"):
         frame.set_attributes("wbirth", value=family.wbirth)
         frame.set_attributes("hdeath", value=family.hdeath)
         frame.set_attributes("wdeath", value=family.wdeath)
-        frame.set_attributes("marriage", value=family.marriage)
-        frame.set_attributes("children", value=family.children)
+        frame.set_attributes("marriage", value=remove_pblocks(family.marriage))
+        frame.set_attributes("children", value=remove_pblocks(family.children))
         frame.set_attributes("pictures", value=family.pictures)
         frame.set_attributes("notes", value=remove_pblocks(family.notes))
 
@@ -331,8 +331,8 @@ def start_efamily_widget(dir="./"):
         wbirth = frame.get_attribute("wbirth", "value")
         hdeath = frame.get_attribute("hdeath", "value")
         wdeath = frame.get_attribute("wdeath", "value")
-        marriage = frame.get_attribute("marriage", "value")
-        children = frame.get_attribute("children", "value")
+        marriage = add_pblocks(frame.get_attribute("marriage", "value"))
+        children = add_pblocks(frame.get_attribute("children", "value"))
         pictures = frame.get_attribute("pictures", "value")
         notes = add_pblocks(frame.get_attribute("notes", "value"))
         id = ""
@@ -422,7 +422,8 @@ def start_efamily_widget(dir="./"):
             data.process("./../data/", output, "./../template/")
             print("Generated " + str(len(data.families)) + " file(s).")
         shutil.make_archive("./../notebook/files", "zip", output)
-        frame.set_attributes("download_link", value="<a href=\"files.zip\" download=\"family_tree.zip\">Family Tree Download</a>")
+        frame.set_attributes("download_link", value=
+"<a href=\"files.zip\" download=\"family_tree.zip\">Family Tree Download</a>, <a href=\"files.zip\">Family Tree View</a>")
             
     frame.set_state_callbacks("generate_tree", generate_tree_handler, attribute=None, type="on_click")
 
