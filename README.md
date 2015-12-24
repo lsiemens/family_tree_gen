@@ -1,4 +1,4 @@
-# family_tree_maker
+# family_tree_gen
 Generate HTML family tree. This software is designed for windows.
 
 WARNING: This software is experimental!

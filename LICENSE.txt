@@ -1,3 +1,15 @@
+The icon "green_tree.ico" is licensed under the Creative Commons Attribution 4.0
+International License (CC-BY 4.0). This icon is a modified version of the file
+"Pixelkit-Flat-Jewels-Tree.ico" from "www.iconarchive.com/show/flat-jewels-icons-by-pixelkit/Tree-icon.html".
+This work was originaly from "pixelkit.com". For the full license see CC_BY_4.0.txt
+or https://creativecommons.org/licenses/by/4.0/. The modifications to the original
+ico file from www.iconarchive.com consist of changing the color of the leaves and
+tree trunk.
+
+
+
+All other files are licensed under the BSD-3. Full license text below,
+
 Copyright (c) 2015, Luke Siemens
 All rights reserved.
 
@@ -11,7 +23,7 @@ modification, are permitted provided that the following conditions are met:
   this list of conditions and the following disclaimer in the documentation
   and/or other materials provided with the distribution.
 
-* Neither the name of family_tree_maker nor the names of its
+* Neither the name of family_tree_gen nor the names of its
   contributors may be used to endorse or promote products derived from
   this software without specific prior written permission.
 
@@ -25,4 +37,3 @@ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
 CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
