@@ -414,16 +414,22 @@ def start_efamily_widget(dir="./"):
 
     def generate_tree_handler(widget):
         dir = frame.get_state_data("dir")
-        output = "./../html/files/"
+        output = "./../notebook/files/"
         shutil.rmtree(output, True)
         os.mkdir(output)
         if os.path.isdir(dir):
             data = efamily.interpreter()
             data.process("./../data/", output, "./../template/")
             print("Generated " + str(len(data.families)) + " file(s).")
+        
+        fname = ""
+        for filename in os.listdir(output):
+            if ".html" in filename:
+                fname = filename
+                break
+        
         shutil.make_archive("./../notebook/files", "zip", output)
-        frame.set_attributes("download_link", value=
-"<a href=\"files.zip\" download=\"family_tree.zip\">Family Tree Download</a>, <a href=\"files.zip\">Family Tree View</a>")
+        frame.set_attributes("download_link", value= "<a href=\"files.zip\" download=\"family_tree.zip\">Family Tree Download</a>, <a href=\"files/" + filename + "\" target=\"_blank\">Family Tree View</a>")
             
     frame.set_state_callbacks("generate_tree", generate_tree_handler, attribute=None, type="on_click")
 
